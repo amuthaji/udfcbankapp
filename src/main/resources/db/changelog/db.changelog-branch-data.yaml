@@ -1,0 +1,49 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-branch-data
+      author: Ajith-full-stacker
+      changes:
+        - createTable:
+            tableName: branch
+            columns:
+              - column:
+                  name: branch_name
+                  type: varchar(100)
+                  constraints:
+                    primaryKey: true
+              - column:
+                  name: branch_code
+                  type: varchar(20)
+              - column:
+                  name: ifsc_code
+                  type: varchar(20)
+        - insert:
+            tableName: branch
+            columns:
+              - column: { name: branch_name, value: Coimbatore }
+              - column: { name: branch_code, value: 100101 }
+              - column: { name: ifsc_code, value: UDFC0000011 }
+        - insert:
+            tableName: branch
+            columns:
+              - column: { name: branch_name, value: Madurai }
+              - column: { name: branch_code, value: 100102 }
+              - column: { name: ifsc_code, value: UDFC0000022 }
+        - insert:
+            tableName: branch
+            columns:
+              - column: { name: branch_name, value: Theni }
+              - column: { name: branch_code, value: 100103 }
+              - column: { name: ifsc_code, value: UDFC0000033 }
+        - insert:
+            tableName: branch
+            columns:
+              - column: { name: branch_name, value: Chennai }
+              - column: { name: branch_code, value: 100104 }
+              - column: { name: ifsc_code, value: UDFC0000044 }
+        - insert:
+            tableName: branch
+            columns:
+              - column: { name: branch_name, value: Trichy }
+              - column: { name: branch_code, value: 100105 }
+              - column: { name: ifsc_code, value: UDFC0000055 }
